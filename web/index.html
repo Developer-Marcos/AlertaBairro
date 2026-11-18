@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AlertaBairro - Painel</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="topo">
+        <div class="container barra">
+            <a class="marca" href="index.html">AlertaBairro</a>
+            <nav aria-label="Principal">
+                <ul>
+                    <li><a href="index.html">Painel</a></li>
+                    <li><a href="ocorrencias.html">Ocorrencias</a></li>
+                    <li><a href="abrigos.html">Abrigos</a></li>
+                    <li><a href="cidadaos.html">Cidadaos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Painel de monitoramento</h1>
+        <p class="sub">Alertas e apoio comunitario para areas sujeitas a enchentes e deslizamentos.</p>
+
+        <p id="msg" class="msg erro" role="alert" hidden></p>
+
+        <section aria-label="Resumo" class="grade quatro" style="margin-bottom:20px">
+            <div class="cartao" style="margin:0"><div class="numero" id="n-cidadaos">-</div><div class="rotulo">Cidadaos cadastrados</div></div>
+            <div class="cartao" style="margin:0"><div class="numero" id="n-ocorrencias">-</div><div class="rotulo">Ocorrencias registradas</div></div>
+            <div class="cartao" style="margin:0"><div class="numero" id="n-abrigos">-</div><div class="rotulo">Abrigos</div></div>
+            <div class="cartao" style="margin:0"><div class="numero" id="n-vagas">-</div><div class="rotulo">Vagas livres nos abrigos</div></div>
+        </section>
+
+        <section class="cartao">
+            <h2>Ocorrencias mais graves</h2>
+            <div id="graves"></div>
+        </section>
+
+        <div class="grade duas">
+            <section class="cartao">
+                <h2>Ocorrencias por bairro</h2>
+                <div id="rel-bairros"></div>
+            </section>
+            <section class="cartao">
+                <h2>Ocorrencias por tipo</h2>
+                <div id="rel-tipos"></div>
+            </section>
+        </div>
+
+        <section class="cartao">
+            <h2>Abrigos mais acionados</h2>
+            <div id="rel-abrigos"></div>
+        </section>
+
+        <section class="cartao">
+            <h2>Sobre o projeto</h2>
+            <p>Moradores de areas vulneraveis a enchentes e alagamentos nao tem alertas rapidos nem um canal organizado para avisar a defesa civil e os vizinhos. O AlertaBairro permite registrar ocorrencias, gerar alertas por gravidade e acionar abrigos com vagas disponiveis.</p>
+            <div class="ods"><span>ODS 11 - Cidades e comunidades sustentaveis</span><span>ODS 13 - Acao contra a mudanca global do clima</span></div>
+        </section>
+    </main>
+
+    <footer><div class="container">AlertaBairro - Global Solution 2026/2 FIAP - CitizenTech</div></footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/painel.js"></script>
+</body>
+</html>

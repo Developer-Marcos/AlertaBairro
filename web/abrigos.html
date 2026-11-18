@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AlertaBairro - Abrigos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="topo">
+        <div class="container barra">
+            <a class="marca" href="index.html">AlertaBairro</a>
+            <nav aria-label="Principal">
+                <ul>
+                    <li><a href="index.html">Painel</a></li>
+                    <li><a href="ocorrencias.html">Ocorrencias</a></li>
+                    <li><a href="abrigos.html">Abrigos</a></li>
+                    <li><a href="cidadaos.html">Cidadaos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Abrigos</h1>
+        <p class="sub">Locais seguros para receber moradores durante uma emergencia.</p>
+
+        <p id="msg" class="msg" role="alert" hidden></p>
+
+        <section class="cartao">
+            <h2 id="titulo-form">Novo abrigo</h2>
+            <form id="form" novalidate>
+                <input type="hidden" name="id">
+                <div class="campos">
+                    <label>Nome <input type="text" name="nome" maxlength="100" required></label>
+                    <label>Capacidade <input type="number" name="capacidade" min="1" required></label>
+                    <label>Vagas disponiveis <input type="number" name="vagas" min="0" required></label>
+                    <label>Logradouro <input type="text" name="logradouro" maxlength="150" required></label>
+                    <label>Bairro <input type="text" name="bairro" maxlength="80" required></label>
+                </div>
+                <div class="acoes-form">
+                    <button type="submit">Salvar</button>
+                    <button type="button" class="leve" id="cancelar" hidden>Cancelar edicao</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="cartao">
+            <h2>Abrigos cadastrados</h2>
+            <table class="cartoes">
+                <thead><tr><th>Nome</th><th>Bairro</th><th>Logradouro</th><th>Vagas</th><th>Acoes</th></tr></thead>
+                <tbody id="corpo"></tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer><div class="container">AlertaBairro - Global Solution 2026/2 FIAP - CitizenTech</div></footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/abrigos.js"></script>
+</body>
+</html>

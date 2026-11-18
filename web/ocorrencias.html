@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AlertaBairro - Ocorrencias</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="topo">
+        <div class="container barra">
+            <a class="marca" href="index.html">AlertaBairro</a>
+            <nav aria-label="Principal">
+                <ul>
+                    <li><a href="index.html">Painel</a></li>
+                    <li><a href="ocorrencias.html">Ocorrencias</a></li>
+                    <li><a href="abrigos.html">Abrigos</a></li>
+                    <li><a href="cidadaos.html">Cidadaos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Ocorrencias</h1>
+        <p class="sub">Registre alagamentos e deslizamentos e acione abrigos para atender cada caso.</p>
+
+        <p id="msg" class="msg" role="alert" hidden></p>
+
+        <section class="cartao">
+            <h2 id="titulo-form">Nova ocorrencia</h2>
+            <form id="form" novalidate>
+                <input type="hidden" name="id">
+                <div class="campos">
+                    <label>Tipo
+                        <select name="tipo" required>
+                            <option value="ALAGAMENTO">Alagamento</option>
+                            <option value="DESLIZAMENTO">Deslizamento</option>
+                        </select>
+                    </label>
+                    <label>Severidade
+                        <select name="severidade" required>
+                            <option value="1">1 - Baixa</option>
+                            <option value="2">2</option>
+                            <option value="3" selected>3 - Media</option>
+                            <option value="4">4</option>
+                            <option value="5">5 - Critica</option>
+                        </select>
+                    </label>
+                    <label>Cidadao que registra
+                        <select name="idCidadao" id="sel-cidadao" required></select>
+                    </label>
+                    <label class="largo">Descricao
+                        <textarea name="descricao" rows="3" maxlength="300" required></textarea>
+                    </label>
+                </div>
+                <div class="acoes-form">
+                    <button type="submit">Salvar</button>
+                    <button type="button" class="leve" id="cancelar" hidden>Cancelar edicao</button>
+                </div>
+            </form>
+        </section>
+
+        <section>
+            <h2>Ocorrencias registradas</h2>
+            <div id="lista"></div>
+        </section>
+    </main>
+
+    <footer><div class="container">AlertaBairro - Global Solution 2026/2 FIAP - CitizenTech</div></footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/ocorrencias.js"></script>
+</body>
+</html>
